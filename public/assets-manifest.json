@@ -1,0 +1,11 @@
+{
+  "main.js": "render-page.js",
+  "render-page.js.map": "render-page.js.map",
+  "static/IMG_9201-1200x800.jpg": "static/IMG_9201-1200x800-1d40e293fe7dd4c29a57724d2cc49e09.jpg",
+  "static/eastcoast.png": "static/eastcoast-50cfc1c88a1dcd9240adc6aa030c947b.png",
+  "static/logo-2.png": "static/logo-2-0895a254cf8d32bf12fdf02f27eb13d3.png",
+  "static/logo-circle.png": "static/logo-circle-ee06bbb6c489ec41522dd8aa69c43edc.png",
+  "static/midwest.png": "static/midwest-ab5fec239611cbbe1cd38bd0e84189dc.png",
+  "static/mikita-yo-A1O9SszBHqE-unsplash.jpg": "static/mikita-yo-A1O9SszBHqE-unsplash-e376901f4b5d6f35190ce76712fc4704.jpg",
+  "static/pacific.png": "static/pacific-e5b3c3c38c55f79f32cd47bf9b255208.png"
+}
