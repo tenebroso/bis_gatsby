@@ -91,7 +91,7 @@ const IndexPage = () => {
   const logoRoller = useRef(null);
 
   const handleScroll = () => {
-    if (window.pageYOffset && window.pageYOffset > 0) {
+    if (window && window.pageYOffset && window.pageYOffset > 0) {
       document.getElementById('header').classList.add('sticky');
       console.log(logoRoller.current);
       logoRoller.current.classList.add('yo');
@@ -101,7 +101,10 @@ const IndexPage = () => {
     }
   }
 
-  window.addEventListener('scroll', handleScroll);
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+  });
+
   return (
     <>
       <Helmet>
