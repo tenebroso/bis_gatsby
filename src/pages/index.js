@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { Helmet } from "react-helmet"
 import LogoImg from "../images/logo-2.png";
 import LogoCircle from "../images/logo-circle.png";
