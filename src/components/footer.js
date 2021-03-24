@@ -14,7 +14,7 @@ const Footer = () => (
         <img src={Naltea} alt="Naltea" />
         <img src={Gold} alt="Gold" />
       </div>
-      <p>&copy; Boomerang Information Systems. Offices in Chicago, Seattle, and Boston | <a href="#">Privacy Policy</a> | All rights reserved.</p>
+      <p>&copy; Boomerang Information Services. Offices in Chicago, Seattle, and Boston | <a href="#">Privacy Policy</a> | All rights reserved.</p>
     </div>
   </div>
 )
