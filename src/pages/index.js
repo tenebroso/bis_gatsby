@@ -1,14 +1,15 @@
 import * as React from "react"
-import { useRef, useEffect } from "react";
 import { Helmet } from "react-helmet"
-import LogoImg from "../images/logo-2.png";
-import LogoCircle from "../images/logo-circle.png";
+import { Link } from "gatsby"
 import SampleImg from "../images/mikita-yo-A1O9SszBHqE-unsplash.jpg";
 import GroupPhoto from "../images/IMG_9201-1200x800.jpg";
 
 import EastCoast from "../images/eastcoast.png";
 import WestCoast from "../images/pacific.png";
 import Midwest from "../images/midwest.png";
+
+import Header from '../components/header';
+import Footer from '../components/footer';
 
 
 const COLORS = {
@@ -87,25 +88,7 @@ const buttonAlt = {
 }
 
 // markup
-const IndexPage = () => {
-  const logoRoller = useRef(null);
-
-  const handleScroll = () => {
-    if (window && window.pageYOffset && window.pageYOffset > 0) {
-      document.getElementById('header').classList.add('sticky');
-      console.log(logoRoller.current);
-      logoRoller.current.classList.add('yo');
-    } else {
-      document.getElementById('header').classList.remove('sticky');
-      logoRoller.current.classList.remove('yo');
-    }
-  }
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-  });
-
-  return (
+const IndexPage = () => (
     <>
       <Helmet>
         <meta charSet="utf-8" />
@@ -115,23 +98,7 @@ const IndexPage = () => {
       <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" /> 
       <div id="wrapper">
-        <div id="header">
-          <div className="container">
-            <a id="logo" href="/">
-              <img src={LogoImg} className="logo" alt="Boomerang Information Systems" />
-              <img src={LogoCircle} ref={logoRoller} className="alt-logo" />
-            </a>
-            <div id="menu">
-              <ul>
-                <li className="current_page_item"><a href="#" accessKey="1" title="">Home</a></li>
-                <li><a href="#" accessKey="2" title="">About Us</a></li>
-                <li><a href="#" accessKey="3" title="">Services</a></li>
-                <li><a href="#" accessKey="5" title="">Blog</a></li>
-                <li><a href="#" accessKey="4" title="">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <Header />
         <div id="banner">
           <div className="banner-container">
             <div className="banner-text">
@@ -158,7 +125,7 @@ const IndexPage = () => {
               <span className="byline">Our mission at Boomerang is to give corporate information services a human touch, making due diligence a conversation instead of a headache.</span> </div>
           </div>
           <ul className="actions">
-            <li><a href="#" className="button">Let's Get Started</a></li>
+            <li><Link to="/contact" className="button">Let's Get Started</Link></li>
           </ul>
         </div>
         <div id="extra" className="container">
@@ -186,7 +153,7 @@ const IndexPage = () => {
             </div>
           </div>
           <ul className="actions">
-            <li><a href="#" className="button">Contact Us</a></li>
+            <li><Link to="/contact" className="button">Contact Us</Link></li>
           </ul>
         </div>
         <div id="page">
@@ -211,7 +178,7 @@ const IndexPage = () => {
           </div>	
           <p>Since 2002, our clients have trusted us with their most complex research projects, freeing them up to focus on bigger priorities.<br />Our exceptional customer service, attention to detail and fast turnaround times have helped us <br />build our reputation as a reliable partner for all your research needs.</p>
           <ul className="actions">
-            <li><a href="#" className="button">Contact Us</a></li>
+            <li><Link to="/contact" className="button">Contact Us</Link></li>
           </ul>
         </div>
 
@@ -222,40 +189,38 @@ const IndexPage = () => {
               <h2>Latest from the Blog</h2>
               <span className="byline"></span>
             </div>
-              <a href="#" className="blog-post">
+              <Link className="blog-post" to="/blog">
                 <div className="blog-post-content">
                   <h2>An SOS for the Arts</h2>
                   <p>At Boomerang, we love the arts.  Many of our staff are actively involved in making art and we, as an organization, support the work of a variety of arts organizations...</p>
                   <img src="https://www.boomerangis.com/wp-content/uploads/2020/05/nick-bolton-_fMPg0ehPhg-unsplash-320x202.jpg" alt="An SOS for the Arts" />
                 </div>
-              </a>
+              </Link>
 
-              <a href="#" className="blog-post">
+              <Link className="blog-post" to="/blog">
                 <div className="blog-post-content">
                   <h2>Additional Role of COVID-19 – The Nonprofit Sector</h2>
                   <p>Of the many traditions, institutions and social structures adversely affected by COVID-19, the nonprofit sector is perhaps among the most vulnerable...</p>
                   <img src="https://www.boomerangis.com/wp-content/uploads/2020/04/unnamed-320x202.png" alt="Additional role of COVID-19" />
                 </div>
-              </a>
+              </Link>
 
-              <a href="#" className="blog-post">
+              <Link className="blog-post" to="/blog">
                 <div className="blog-post-content">
                   <h2>A U.C.C. Glossary: Confusing Terms and Their Definitions</h2>
                   <p>At our house we have an ongoing game of coming up with names for a hypothetical band, despite the fact that none of us are currently in one...</p>
                   <img src="https://www.boomerangis.com/wp-content/uploads/2019/06/Blog500x300_UCCGlossary_BoomerangIS2-320x202.png" alt="Boomerang UCC Glossary" />
                 </div>
-              </a>
+              </Link>
 
               <ul className="actions">
-                <li><a href="#" className="button">Read More</a></li>
+                <li><Link className="button" to="/blog">Read More</Link></li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-      <div id="copyright" className="container">
-        <p>&copy; Boomerang Information Systems. Offices in Chicago, Seattle, and Boston | <a href="#">Privacy Policy</a> | All rights reserved.</p>
-      </div>
+      <Footer />
     </>
     // <main style={pageStyles}>
     //   <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -285,7 +250,6 @@ const IndexPage = () => {
     //     <a style={buttonAlt}>Button CTA</a>
     //   </section>
     // </main>
-  )
-}
+);
 
 export default IndexPage
