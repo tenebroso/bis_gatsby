@@ -1,6 +1,6 @@
 import * as React from "react"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import { useRef, useEffect } from "react";
-import { Link } from "gatsby"
 import LogoImg from "../images/logo-2.png";
 import LogoCircle from "../images/logo-circle.png";
 
@@ -24,6 +24,24 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
   });
 
+  const {
+    wp: {
+      allSettings
+    },
+  } = useStaticQuery(graphql`
+    query GetSiteOptions {
+      wp {
+        allSettings {
+          generalSettingsUrl
+          generalSettingsTitle
+          generalSettingsDescription
+        }
+      }
+    }  
+  `)
+
+  // console.log(allSettings);
+
   return (
     <>
       <div id="header">
@@ -34,9 +52,9 @@ const Header = () => {
           </Link>
           <div id="menu">
             <ul>
-              <li className="current_page_item"><Link to="/">Home</Link></li>
-              <li><Link to="/subpage">About Us</Link></li>
-              <li><Link to="#">Services</Link></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about-us">About Us</Link></li>
+              <li><Link to="/services">Services</Link></li>
               <li><Link to="/blog">Blog</Link></li>
               <li><Link to="/contact">Contact</Link></li>
             </ul>

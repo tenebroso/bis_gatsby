@@ -144,13 +144,15 @@ const SubPage = () => (
             <h3>Seattle</h3>
             100 S King St. Suite 100, Seattle, WA 98104<br />
             312.662.1206<br />
-            888.866.4495
+            888.866.4495<br />
+            <a href="mailto:orders@boomerangis.com">orders@boomerangis.com</a>
           </div>
           <div className="address-block">
             <h3>Boston</h3>
             660 Main Street, Woburn, MA 01801<br />
             312.662.1206<br />
-            888.866.4495
+            888.866.4495<br />
+            <a href="mailto:orders@boomerangis.com">orders@boomerangis.com</a>
           </div>
         </div>
       </div>
