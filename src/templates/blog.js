@@ -2,6 +2,7 @@ import React from "react"
 import parse from "html-react-parser"
 import { Helmet } from "react-helmet"
 import { graphql, Link } from "gatsby"
+import Image from "gatsby-image"
 
 import Header from '../components/header';
 import Footer from '../components/footer';
@@ -20,6 +21,7 @@ const BlogTemplate = ({
   },
   pageContext: { nextPagePath, previousPagePath },
 }) => {
+  
 
   return (
     <>
@@ -47,11 +49,20 @@ const BlogTemplate = ({
         <div className="container">
           <div className="blog-container">
             {posts.map((post, i) => {
+              const featuredImage = {
+                fluid: post.featuredImage?.node?.localFile?.childImageSharp?.fluid,
+                alt: post.featuredImage?.node?.alt || ``,
+              }
+
               return (
                 <Link to={post.uri} className="blog-post" key={i}>
                   <div className="blog-post-content">
                     <h2>{post.title}</h2>
                     <p>{parse(post.excerpt)}</p>
+                    <Image
+                      fluid={featuredImage.fluid}
+                      alt={featuredImage.alt}
+                    />
                     <p className="blog-post-date">{post.date}</p>
                   </div>
                 </Link>
@@ -80,7 +91,19 @@ export const pageQuery = graphql`
         uri
         date(formatString: "MMMM DD, YYYY")
         title
-        excerpt
+
+        featuredImage {
+          node {
+            altText
+            localFile {
+              childImageSharp {
+                fluid(maxWidth: 600, quality: 100) {
+                  ...GatsbyImageSharpFluid_tracedSVG
+                }
+              }
+            }
+          }
+        }
       }
     }
 
@@ -89,12 +112,6 @@ export const pageQuery = graphql`
       title
       page_header {
         subtitle
-      }
-      featuredImage {
-        node {
-          uri
-          altText
-        }
       }
     }
   }

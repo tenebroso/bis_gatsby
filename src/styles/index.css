@@ -549,7 +549,7 @@ div#three-column,
   letter-spacing: 1px;
 }
 
-.blog-post img {
+.blog-post .gatsby-image-wrapper {
   order: 0;
   margin-bottom: 10px;
 }
