@@ -22,7 +22,7 @@ const PostTemplate = ({ data: { page } }) => {
       </Helmet>
       <Header />
 
-      <div id="wrapper">
+      <div id="wrapper" className="blog-post-page">
         <div className="page-header post-header">
           <div className="container">
             <div className="post-header-text">
@@ -71,7 +71,7 @@ export const postQuery = graphql`
           altText
           localFile {
             childImageSharp {
-              fluid(maxWidth: 600, quality: 100) {
+              fluid(maxWidth: 680, quality: 100) {
                 ...GatsbyImageSharpFluid_tracedSVG
               }
             }

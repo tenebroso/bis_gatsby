@@ -77,6 +77,10 @@ a:hover
   width: 1000px;
 }
 
+.blog-post-page .container {
+  max-width: 680px;
+}
+
 /*********************************************************************************/
 /* Image Style                                                                   */
 /*********************************************************************************/
@@ -929,6 +933,10 @@ border-radius: 8px;
   font-size: 52px;
   margin: 0 0 20px 0;
   line-height: 1;
+}
+
+.page-content {
+  font-size: 18px;
 }
 
 .page-content.dark-bg {
