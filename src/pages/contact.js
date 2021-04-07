@@ -70,7 +70,7 @@ const ContactPage = () => {
               <form onSubmit={handleOnSubmit} className="bis-form">
                 <input type="email" name="email" placeholder="Your Email" />
                 <input type="text" name="name" placeholder="Your Name" />
-                <input type="text" name="message" placeholder="Your Message" />
+                <textarea type="text" name="message" placeholder="Your Message" />
                 <button type="submit" className="button">Send</button>
               </form>
             </div>

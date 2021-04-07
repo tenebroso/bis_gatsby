@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import { useRef, useEffect } from "react";
+import SocialIcons from './social-icons';
 import LogoImg from "../images/logo-2.png";
 import LogoCircle from "../images/logo-circle.png";
 
@@ -50,6 +51,7 @@ const Header = () => {
             <img src={LogoImg} className="logo" alt="Boomerang Information Systems" />
             <img src={LogoCircle} ref={logoRoller} className="alt-logo" alt="Boomerang Circle Icon" />
           </Link>
+          <SocialIcons />
           <div id="menu">
             <ul>
               <li><Link to="/">Home</Link></li>
