@@ -1,5 +1,6 @@
 const path = require(`path`)
 const chunk = require(`lodash/chunk`)
+const { slash } = require(`gatsby-core-utils`)
 
 exports.createPages = async gatsbyUtilities  => {
   const { graphql, actions, reporter } = gatsbyUtilities
@@ -12,10 +13,18 @@ exports.createPages = async gatsbyUtilities  => {
   const {
     data: {
       allWpPage: { nodes: allPages },
+      allWpPost: { nodes: allPosts },
     },
   } = await graphql(`
     query {
       allWpPage {
+        nodes {
+          id
+          uri
+        }
+      }
+
+      allWpPost {
         nodes {
           id
           uri
@@ -26,7 +35,7 @@ exports.createPages = async gatsbyUtilities  => {
 
   const homeTemplate = path.resolve(`./src/templates/home.js`);
   const pageTemplate = path.resolve(`./src/templates/page.js`);
-  // const postTemplate = path.resolve(`./src/templates/post.js`)
+  const postTemplate = path.resolve(`./src/templates/post.js`)
 
   const getTemplate = (uri) => {
     if (uri === '/') {
@@ -48,7 +57,22 @@ exports.createPages = async gatsbyUtilities  => {
         id: page.id,
       },
     });
-  })
+  });
+
+  allPosts.forEach(post => {
+    createPage({
+      // will be the url for the page
+      path: post.uri,
+      // specify the component template of your choice
+      component: slash(postTemplate),
+      // In the ^template's GraphQL query, 'id' will be available
+      // as a GraphQL variable to query for this post's data.
+      context: {
+        id: post.id,
+      },
+    })
+  });
+
 }
 
 

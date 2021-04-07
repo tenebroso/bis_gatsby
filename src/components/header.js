@@ -40,7 +40,7 @@ const Header = () => {
     }  
   `)
 
-  // console.log(allSettings);
+  console.log(allSettings);
 
   return (
     <>
@@ -48,7 +48,7 @@ const Header = () => {
         <div className="container">
           <Link to="/" id="logo">
             <img src={LogoImg} className="logo" alt="Boomerang Information Systems" />
-            <img src={LogoCircle} ref={logoRoller} className="alt-logo" />
+            <img src={LogoCircle} ref={logoRoller} className="alt-logo" alt="Boomerang Circle Icon" />
           </Link>
           <div id="menu">
             <ul>

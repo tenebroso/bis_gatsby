@@ -6,10 +6,6 @@ import Image from "gatsby-image"
 
 import Header from '../components/header';
 import Footer from '../components/footer';
-import MagnifyingIcon from '../images/magnifying-icon.png';
-import HandIcon from '../images/hand-icon.png';
-import FileIcon from '../images/file-icon.png';
-import { COLORS } from '../constants/colors';
 
 const PostTemplate = ({ data: { page } }) => {
   const featuredImage = {
@@ -27,26 +23,28 @@ const PostTemplate = ({ data: { page } }) => {
       <Header />
 
       <div id="wrapper">
-        <div className="page-header">
+        <div className="page-header post-header">
           <div className="container">
-            <div className="page-header-text">
-              <h1 className="page-header-title">{page.title}</h1>
-              <h2 className="page-header-sub-title">{!!page.page_header && !!page.page_header.subtitle && page.page_header.subtitle}</h2>
-              <img src={MagnifyingIcon} />
-              <img src={HandIcon} />
-              <img src={FileIcon} />
+            <div className="post-header-text">
+              <h1 className="post-header-title">{page.title}</h1>
+              <p className="post-header-sub-title">{page.date}</p>
             </div>
-            <div className="page-header-photos banner-photos">
+            {/* <div className="page-header-photos banner-photos">
               <Image
                 fluid={featuredImage.fluid}
                 alt={featuredImage.alt}
               />
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="page-content dark-bg">
           <div className="container">
             {page && page.content && typeof page.content === 'string' && parse(page.content)}
+            <hr />
+            <Image
+              fluid={featuredImage.fluid}
+              alt={featuredImage.alt}
+            />
           </div>
         </div>
       </div>
@@ -66,6 +64,7 @@ export const postQuery = graphql`
       id
       content
       title
+      date(formatString: "MMMM DD, YYYY")
 
       featuredImage {
         node {
