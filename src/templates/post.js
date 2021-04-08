@@ -6,6 +6,7 @@ import Image from "gatsby-image"
 
 import Header from '../components/header';
 import Footer from '../components/footer';
+import SEO from '../components/seo';
 
 const PostTemplate = ({ data: { page } }) => {
   const featuredImage = {
@@ -15,11 +16,11 @@ const PostTemplate = ({ data: { page } }) => {
 
   return (
     <>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Boomerang Information Systems</title>
-        <link rel="canonical" href="http://mysite.com/example" />
-      </Helmet>
+      <SEO 
+        title={page.seo.title}
+        description={page.seo.opengraphDescription}
+        image={page.seo.opengraphImage.mediaItemUrl}
+      />
       <Header />
 
       <div id="wrapper" className="blog-post-page">
@@ -78,6 +79,24 @@ export const postQuery = graphql`
           }
         }
       }
+
+      seo {
+        canonical
+        metaDesc
+        title
+        twitterDescription
+        opengraphTitle
+        opengraphUrl
+        twitterTitle
+        opengraphDescription
+
+        opengraphImage {
+          id
+          mediaItemUrl
+          altText
+        }
+      }
+
     }
   }
 `

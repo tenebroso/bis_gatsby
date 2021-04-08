@@ -6,6 +6,7 @@ import Image from "gatsby-image"
 
 import Header from '../components/header';
 import Footer from '../components/footer';
+import SEO from '../components/seo';
 import BlogHeader from '../images/blog-header.jpg';
 
 const BlogTemplate = ({
@@ -17,6 +18,7 @@ const BlogTemplate = ({
       title,
       page_header,
       featuredImage,
+      seo,
     }
   },
   pageContext: { nextPagePath, previousPagePath },
@@ -25,11 +27,11 @@ const BlogTemplate = ({
 
   return (
     <>
-    <Helmet>
-      <meta charSet="utf-8" />
-      <title>Boomerang Information Systems</title>
-      <link rel="canonical" href="http://mysite.com/example" />
-    </Helmet>
+    <SEO 
+      title={seo.title}
+      description={seo.opengraphDescription}
+      image={seo.opengraphImage.mediaItemUrl}
+    />
     <Header />
 
     <div id="wrapper">
@@ -112,6 +114,23 @@ export const pageQuery = graphql`
       title
       page_header {
         subtitle
+      }
+
+      seo {
+        canonical
+        metaDesc
+        title
+        twitterDescription
+        opengraphTitle
+        opengraphUrl
+        twitterTitle
+        opengraphDescription
+
+        opengraphImage {
+          id
+          mediaItemUrl
+          altText
+        }
       }
     }
   }

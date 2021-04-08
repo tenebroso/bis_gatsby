@@ -4,6 +4,7 @@ import axios from "axios";
 import Header from '../components/header';
 import Footer from '../components/footer';
 import ContactHeader from '../images/contact.jpg';
+import SEO from '../components/seo';
 import { config } from '../constants';
 
 // markup
@@ -44,11 +45,10 @@ const ContactPage = () => {
   
   return (
     <>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Boomerang Information Systems</title>
-        <link rel="canonical" href="http://mysite.com/example" />
-      </Helmet>
+      <SEO 
+        title="Contact Us - Boomerang Information Systems"
+        description=''
+      />
       <Header />
 
       <div id="wrapper">

@@ -4,6 +4,7 @@ import parse from "html-react-parser"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
 
+import SEO from '../components/seo';
 import Header from '../components/header';
 import Footer from '../components/footer';
 
@@ -15,11 +16,11 @@ const PageTemplate = ({ data: { page } }) => {
 
   return (
     <>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Boomerang Information Systems</title>
-        <link rel="canonical" href="http://mysite.com/example" />
-      </Helmet>
+      <SEO 
+        title={page.seo.title}
+        description={page.seo.opengraphDescription}
+        image={page.seo.opengraphImage.mediaItemUrl}
+      />
       <Header />
 
       <div id="wrapper">
@@ -78,6 +79,23 @@ export const pageQuery = graphql`
 
       page_header {
         subtitle
+      }
+
+      seo {
+        canonical
+        metaDesc
+        title
+        twitterDescription
+        opengraphTitle
+        opengraphUrl
+        twitterTitle
+        opengraphDescription
+
+        opengraphImage {
+          id
+          mediaItemUrl
+          altText
+        }
       }
 
     }
