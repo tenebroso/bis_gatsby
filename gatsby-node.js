@@ -4,13 +4,45 @@ const { slash } = require(`gatsby-core-utils`)
 
 const redirects = [
 	{
-		 "fromPath": "/test22",
-		 "toPath": "/about-us"
+		 "fromPath": "/author/johnpratt/",
+		 "toPath": "/blog/"
 	},
 	{
-		 "fromPath": "/test33",
-		 "toPath": "/services"
+		 "fromPath": "/author/james/",
+		 "toPath": "/blog/"
 	},
+  {
+    "fromPath": "/author/boomerangsite/",
+    "toPath": "/blog/"
+  },
+  {
+    "fromPath": "/team",
+    "toPath": "/about-us/"
+  },
+  {
+    "fromPath": "/process",
+    "toPath": "/contact/"
+  },
+  {
+    "fromPath": "/our-clients",
+    "toPath": "/services/"
+  },
+  {
+    "fromPath": "/testimonials",
+    "toPath": "/services/"
+  },
+  {
+    "fromPath": "/request",
+    "toPath": "/contact/"
+  },
+  {
+    "fromPath": "/covid-19",
+    "toPath": "/"
+  },
+  {
+    "fromPath": "/black-lives-matter",
+    "toPath": "/"
+  },
 ];
 
 exports.createPages = async gatsbyUtilities  => {
@@ -90,12 +122,6 @@ exports.createPages = async gatsbyUtilities  => {
 	    toPath: redirect.toPath,
 	  })
 	);
-
-  createRedirect({
-    fromPath: '/yo',
-    toPath: '/services',
-  })
-
 }
 
 
