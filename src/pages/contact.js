@@ -1,11 +1,9 @@
 import React, { useState }  from "react"
-import { Helmet } from "react-helmet"
 import axios from "axios";
 import Header from '../components/header';
 import Footer from '../components/footer';
 import ContactHeader from '../images/contact.jpg';
 import SEO from '../components/seo';
-import { config } from '../constants';
 
 // markup
 const ContactPage = () => {

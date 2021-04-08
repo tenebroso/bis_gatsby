@@ -2,9 +2,20 @@ const path = require(`path`)
 const chunk = require(`lodash/chunk`)
 const { slash } = require(`gatsby-core-utils`)
 
+const redirects = [
+	{
+		 "fromPath": "/test22",
+		 "toPath": "/about-us"
+	},
+	{
+		 "fromPath": "/test33",
+		 "toPath": "/services"
+	},
+];
+
 exports.createPages = async gatsbyUtilities  => {
   const { graphql, actions, reporter } = gatsbyUtilities
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
   const posts = await getNodes(graphql, reporter)
 
   await createBlogPostArchive(posts, gatsbyUtilities)
@@ -72,6 +83,18 @@ exports.createPages = async gatsbyUtilities  => {
       },
     })
   });
+
+  redirects.forEach((redirect) => 
+		createRedirect({
+	    fromPath: redirect.fromPath,
+	    toPath: redirect.toPath,
+	  })
+	);
+
+  createRedirect({
+    fromPath: '/yo',
+    toPath: '/services',
+  })
 
 }
 

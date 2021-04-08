@@ -1,6 +1,5 @@
 import React from "react"
 import parse from "html-react-parser"
-import { Helmet } from "react-helmet"
 import { graphql, Link } from "gatsby"
 import Image from "gatsby-image"
 
@@ -30,7 +29,7 @@ const BlogTemplate = ({
     <SEO 
       title={seo.title}
       description={seo.opengraphDescription}
-      image={seo.opengraphImage.mediaItemUrl}
+      image={seo && seo.opengraphImage && seo.opengraphImage.mediaItemUrl && seo.opengraphImage.mediaItemUrl}
     />
     <Header />
 

@@ -175,7 +175,7 @@ ul.contact li a
 ul.contact li a:before
 {
   display: inline-block;
-  background: #3f3f3f;
+  background: #292929;
   width: 40px;
   height: 40px;
   line-height: 40px;
@@ -940,7 +940,7 @@ border-radius: 8px;
 }
 
 .page-content.dark-bg {
-  background-color: #3f3f3f;
+  background-color: #292929;
 }
 
 .page-content .container {

@@ -1,5 +1,4 @@
 import React from "react"
-import { Helmet } from "react-helmet"
 import parse from "html-react-parser"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"

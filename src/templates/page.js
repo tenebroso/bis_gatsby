@@ -1,5 +1,4 @@
 import React from "react"
-import { Helmet } from "react-helmet"
 import parse from "html-react-parser"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
@@ -19,7 +18,7 @@ const PageTemplate = ({ data: { page } }) => {
       <SEO 
         title={page.seo.title}
         description={page.seo.opengraphDescription}
-        image={page.seo.opengraphImage.mediaItemUrl}
+        image={page && page.seo && page.seo.opengraphImage && page.seo.opengraphImage.mediaItemUrl && page.seo.opengraphImage.mediaItemUrl}
       />
       <Header />
 
