@@ -707,6 +707,11 @@ padding: 3em 2em 2em 2em;
 border: 1px solid rgba(0,0,0,0.1);
 border-radius: 8px;
   text-align: center;
+width: 100%;
+}
+
+.no-outline {
+  border-color: transparent;
 }
 
 .box p {
@@ -714,6 +719,11 @@ border-radius: 8px;
   margin-top: 10px;
 }
 
+.box > img {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 35%;
+}
 
 #extra
 {

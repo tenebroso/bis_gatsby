@@ -6,9 +6,14 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 
 
-import CutCosts from '../images/cut-costs.png';
-import ResponsiveTeam from '../images/responsive-team.png';
-import ClearReporting from '../images/clear-reporting.png';
+// import CutCosts from '../images/cut-costs.png';
+// import ResponsiveTeam from '../images/responsive-team.png';
+// import ClearReporting from '../images/clear-reporting.png';
+
+import Binoculars from '../images/iconmonstr-binoculars-8-240.png';
+import Magnifier from '../images/iconmonstr-magnifier-10-240.png';
+import Document from '../images/iconmonstr-note-31-240.png';
+
 import JurisdictionsPhoto from '../images/jurisdictions.jpg';
 import SampleImg from '../images/mikita-yo-A1O9SszBHqE-unsplash.jpg';
 import GroupPhoto from '../images/IMG_9201-1200x800.jpg';
@@ -62,7 +67,7 @@ const PageTemplate = ({ data: { page } }) => {
             <li><Link to="/contact" className="button">Let's Get Started</Link></li>
           </ul>
         </div>
-        <div id="extra" className="container">
+        {/* <div id="extra" className="container">
           <div className="title">
             <h2>We’re here for you.</h2>
             <span className="byline">Most requests are completed within 24-hours and we keep you informed every step of the way.</span> </div>
@@ -83,6 +88,38 @@ const PageTemplate = ({ data: { page } }) => {
               <div className="box">
                 <img src={ResponsiveTeam} alt="Responsive Team" />
                 <p>Boomerang’s research team is with you every step of the way. Know exactly what the status of request is and get updated at every stage. If you have questions, our research specialists have answers.</p>
+              </div>
+            </div>
+          </div>
+          <ul className="actions">
+            <li><Link to="/contact" className="button">Contact Us</Link></li>
+          </ul>
+        </div> */}
+        <div id="extra" className="container">
+          <div className="title">
+            <h2>Our Services</h2>
+            {/* <span className="byline">Most requests are completed within 24-hours and we keep you informed every step of the way.</span> */}
+          </div>
+          <div id="three-column">
+            <div className="boxA">
+              <div className="box no-outline">
+                <img src={Binoculars} alt="Binoculars" />
+                <h2>County Search</h2>
+                <p>UCC | Liens | Litigation</p>
+              </div>
+            </div>
+            <div className="boxB">
+              <div className="box no-outline">
+                 <img src={Document} alt="Document" />
+                <h2>Title Search</h2>
+                <p>Commercial | Residential</p>
+              </div>
+            </div>
+            <div className="boxC">
+              <div className="box no-outline">
+                <img src={Magnifier} alt="Magnifiying Icon" />
+                <h2>State Level</h2>
+                <p>Corporate | UCC</p>
               </div>
             </div>
           </div>
