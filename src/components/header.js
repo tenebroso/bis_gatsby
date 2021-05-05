@@ -22,6 +22,19 @@ const Header = () => {
     }
   }
 
+  const toggleNav = () => {
+    const menu = document.querySelector('#menu');
+
+    if (menu && !menu.classList.contains('opened')) {
+      menu.classList.add('opened');
+      return;
+    }
+
+    if (menu) {
+      menu.classList.remove('opened');
+    }
+  }
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
   });
@@ -42,8 +55,6 @@ const Header = () => {
     }  
   `)
 
-  console.log(allSettings);
-
   return (
     <>
       <div id="header">
@@ -53,6 +64,9 @@ const Header = () => {
             <img src={LogoCircle} ref={logoRoller} className="alt-logo" alt="Boomerang Circle Icon" />
           </Link>
           <SocialIcons />
+          <div className="menu-icon" onClick={toggleNav}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/></svg>
+          </div>
           <div id="menu">
             <ul>
               <li><Link to="/">Home</Link></li>
