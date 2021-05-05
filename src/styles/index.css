@@ -349,6 +349,7 @@ div#three-column,
   background-color: #39b4ed;
   border-radius: 4px;
   color: #FFF;
+  text-shadow: 1px 1px 0 rgb(0, 0, 0);
 }
 
 #menu a[aria-current="page"]
