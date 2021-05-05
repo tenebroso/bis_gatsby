@@ -7,7 +7,7 @@ import SEO from '../components/seo';
 import Header from '../components/header';
 import Footer from '../components/footer';
 
-import CutCosts from '../images/cut-costs.png';
+import CutCosts from '../images/file.png';
 import ResponsiveTeam from '../images/responsive-team.png';
 import ClearReporting from '../images/clear-reporting.png';
 
@@ -52,7 +52,8 @@ const PageTemplate = ({ data: { page } }) => {
             <div id="three-column">
               <div className="boxA">
                 <div className="box">
-                  <img src={CutCosts} alt="Cut Costs" />
+                  <img src={ResponsiveTeam} alt="Responsive Team" />
+                  
                   <h2>Research</h2>
                   <p>We know where and how to find the most relevant data for your clients and deliver information in a format you can use right away.</p>
                 </div>
@@ -66,7 +67,7 @@ const PageTemplate = ({ data: { page } }) => {
               </div>
               <div className="boxC">
                 <div className="box">
-                  <img src={ResponsiveTeam} alt="Responsive Team" />
+                  <img src={CutCosts} alt="Cut Costs" />
                   <h2>File</h2>
                   <p>We file documents five days a week to increase your capacity for more headache-free closings.</p>
                 </div>
