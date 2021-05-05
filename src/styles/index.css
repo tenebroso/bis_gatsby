@@ -840,6 +840,15 @@ width: 100%;
   font-size: 18px;
 }
 
+
+.page-content .container ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+.page-content .container ul li {
+  margin-bottom: 20px;
+}
+
 .page-content.dark-bg {
   background-color: #292929;
 }

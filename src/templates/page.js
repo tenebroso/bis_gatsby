@@ -1,11 +1,15 @@
 import React from "react"
 import parse from "html-react-parser"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Image from "gatsby-image"
 
 import SEO from '../components/seo';
 import Header from '../components/header';
 import Footer from '../components/footer';
+
+import CutCosts from '../images/cut-costs.png';
+import ResponsiveTeam from '../images/responsive-team.png';
+import ClearReporting from '../images/clear-reporting.png';
 
 const PageTemplate = ({ data: { page } }) => {
   const featuredImage = {
@@ -40,6 +44,36 @@ const PageTemplate = ({ data: { page } }) => {
             </div>
           </div>
         </div>
+        {page.title === 'Services' && (
+          <div id="extra" className="container">
+            <div className="title">
+              <h2>Boomerang Information Services provides 3 services</h2>
+            </div>
+            <div id="three-column">
+              <div className="boxA">
+                <div className="box">
+                  <img src={CutCosts} alt="Cut Costs" />
+                  <h2>Research</h2>
+                  <p>We know where and how to find the most relevant data for your clients and deliver information in a format you can use right away.</p>
+                </div>
+              </div>
+              <div className="boxB">
+                <div className="box">
+                  <img src={ClearReporting} alt="Clear Reporting" />
+                  <h2>Retrieve</h2>
+                  <p>Our specialists have the jurisdictional knowledge and access to pull digital and physical records when and where they are needed.</p>
+                </div>
+              </div>
+              <div className="boxC">
+                <div className="box">
+                  <img src={ResponsiveTeam} alt="Responsive Team" />
+                  <h2>File</h2>
+                  <p>We file documents five days a week to increase your capacity for more headache-free closings.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
         <div className="page-content dark-bg">
           <div className="container">
             {page && page.content && typeof page.content === 'string' && parse(page.content)}
