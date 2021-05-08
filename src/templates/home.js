@@ -1,9 +1,11 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { graphql, Link } from "gatsby"
+import USAMap from "react-usa-map"
 
 import Header from '../components/header';
 import Footer from '../components/footer';
+import { COLORS } from '../constants/colors';
 
 
 // import CutCosts from '../images/cut-costs.png';
@@ -21,6 +23,22 @@ import GroupPhoto from '../images/IMG_9201-1200x800.jpg';
 import EastCoast from '../images/eastcoast.png';
 import WestCoast from '../images/pacific.png';
 import Midwest from '../images/midwest.png';
+
+const STATES = [
+  'CA', 'WA', 'OR', 'IL', 'IN', 'OH', 'MI', 'WI', 'CT', 'DC', 'DE', 'MA', 'MD', 'NJ', 'NY', 'PA'
+];
+
+const STATES_CONFIG = {};
+
+const statesCustomConfig = () => {
+  STATES.forEach(state => {
+    STATES_CONFIG[state] = {
+      'fill': COLORS.BRAND_PRIMARY,
+    }
+  });
+
+  return STATES_CONFIG;
+};
 
 const PageTemplate = ({ data: { page } }) => {
   return (
@@ -129,10 +147,35 @@ const PageTemplate = ({ data: { page } }) => {
         </div>
         <div id="page">
           <div className="container">
+            <div className="map-wrapper">
+              <USAMap customize={statesCustomConfig()} />
+              <div className="map-overlay">
+                
+                  <div className="title">
+                    <h2  data-title="Full Coverage States">Full Coverage States</h2>
+                  </div>
+                  <div className="addresses">
+                    <div className="address-block">
+                      <h3>Pacific Coast</h3>
+                      CA, WA, OR
+                    </div>
+                    <div className="address-block">
+                      <h3>Great Lakes/Midwest</h3>
+                      IL, IN, OH, MI, WI
+                    </div>
+                    <div className="address-block">
+                      <h3>Mid-Atlantic/East Coast</h3>
+                      CT, DC, DE, MA, MD, NJ, NY, PA
+                    </div>
+                  </div>
+
+              </div>
+            </div>
+            
             <div className="title">
               <h2>Regional Areas</h2>
               <span className="byline">Our offices provide complete county coverage in Illinois, Indiana, Michigan, Ohio, <br />Wisconsin, Connecticut, Massachusetts, New York, Pennsylvania, California, Oregon, and Washington. <br />Our offices in Chicago and Seattle also provide a suite of DMV, consulate, and Secretary of State services.</span> </div>
-            <div className="gallery">
+            {/* <div className="gallery">
               <div className="boxA">
                 <h3>Pacific Coast</h3>
                 <img src={WestCoast} alt="" />
@@ -145,7 +188,7 @@ const PageTemplate = ({ data: { page } }) => {
                 <h3>Mid-Atlantic/East Coast</h3>
                 <img src={EastCoast} alt="" />
               </div>
-            </div>
+            </div> */}
           </div>	
           <p>Since 2002, our clients have trusted us with their most complex research projects, freeing them up to focus on bigger priorities.<br />Our exceptional customer service, attention to detail and fast turnaround times have helped us <br />build our reputation as a reliable partner for all your research needs.</p>
           <ul className="actions">
