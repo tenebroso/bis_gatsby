@@ -44,7 +44,7 @@ const PageTemplate = ({ data: { page } }) => {
             </div>
           </div>
         </div>
-        {page.title === 'Services' && (
+        {page.title === 'Services_not_used' && (
           <div id="extra" className="container">
             <div className="title">
               <h2>Boomerang Information Services provides 3 services</h2>
@@ -76,7 +76,7 @@ const PageTemplate = ({ data: { page } }) => {
           </div>
         )}
         <div className="page-content dark-bg">
-          <div className="container">
+          <div className={`container ${page.title.toLowerCase()}-container`}>
             {page && page.content && typeof page.content === 'string' && parse(page.content)}
           </div>
         </div>
