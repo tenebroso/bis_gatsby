@@ -1142,8 +1142,15 @@ width: 100%;
 .map-overlay {
   position: absolute;
   width: 100%;
-  top: 40%;
+  top: 50%;
   transform: translate(0, -50%);
+}
+
+.map-overlay .byline {
+  text-shadow: rgba(0, 0, 0, .05);
+  color: black;
+  background: rgba(255, 255, 255, .85);
+  padding: 10px;
 }
 
 .map-overlay .addresses {

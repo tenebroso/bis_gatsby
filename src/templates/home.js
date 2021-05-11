@@ -153,6 +153,7 @@ const PageTemplate = ({ data: { page } }) => {
                 
                   <div className="title">
                     <h2  data-title="Full Coverage States">Full Coverage States</h2>
+                    <p className="byline">We assist with research and filing from coast-to-coast, with a focus on the States shown below where we cover every County</p>
                   </div>
                   <div className="addresses">
                     <div className="address-block">
@@ -171,11 +172,11 @@ const PageTemplate = ({ data: { page } }) => {
 
               </div>
             </div>
-            
+{/*             
             <div className="title">
               <h2>Regional Areas</h2>
               <span className="byline">Our offices provide complete county coverage in Illinois, Indiana, Michigan, Ohio, <br />Wisconsin, Connecticut, Massachusetts, New York, Pennsylvania, California, Oregon, and Washington. <br />Our offices in Chicago and Seattle also provide a suite of DMV, consulate, and Secretary of State services.</span> </div>
-            {/* <div className="gallery">
+            <div className="gallery">
               <div className="boxA">
                 <h3>Pacific Coast</h3>
                 <img src={WestCoast} alt="" />
@@ -190,10 +191,10 @@ const PageTemplate = ({ data: { page } }) => {
               </div>
             </div> */}
           </div>	
-          <p>Since 2002, our clients have trusted us with their most complex research projects, freeing them up to focus on bigger priorities.<br />Our exceptional customer service, attention to detail and fast turnaround times have helped us <br />build our reputation as a reliable partner for all your research needs.</p>
-          <ul className="actions">
+          {/* <p>Since 2002, our clients have trusted us with their most complex research projects, freeing them up to focus on bigger priorities.<br />Our exceptional customer service, attention to detail and fast turnaround times have helped us <br />build our reputation as a reliable partner for all your research needs.</p> */}
+          {/* <ul className="actions">
             <li><Link to="/contact" className="button">Contact Us</Link></li>
-          </ul>
+          </ul> */}
         </div>
 
         <div id="blog">
