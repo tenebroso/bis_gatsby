@@ -77,7 +77,7 @@ const ContactPage = () => {
         <div className="address-block-container">
           <div className="container">
             <div className="title">
-              <h2  data-title="Our Locations">Our Locations</h2>
+              <h2  data-title="Our Location">Our Location</h2>
             </div>
             <div className="address-block">
               <h3>Chicago - Main Office</h3>
@@ -86,7 +86,7 @@ const ContactPage = () => {
               888.866.4495<br />
               <a href="mailto:orders@boomerangis.com">orders@boomerangis.com</a>
             </div>
-            <div className="address-block">
+            {/* <div className="address-block">
               <h3>Seattle</h3>
               100 S King St. Suite 100, Seattle, WA 98104<br />
               312.662.1206<br />
@@ -99,7 +99,7 @@ const ContactPage = () => {
               312.662.1206<br />
               888.866.4495<br />
               <a href="mailto:orders@boomerangis.com">orders@boomerangis.com</a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

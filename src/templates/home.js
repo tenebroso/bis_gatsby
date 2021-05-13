@@ -147,12 +147,15 @@ const PageTemplate = ({ data: { page } }) => {
         </div>
         <div id="page">
           <div className="container">
+            <div className="title">
+              <h2>Full Coverage States</h2>
+              {/* <span className="byline">Most requests are completed within 24-hours and we keep you informed every step of the way.</span> */}
+            </div>
             <div className="map-wrapper">
               <USAMap customize={statesCustomConfig()} />
               <div className="map-overlay">
                 
                   <div className="title">
-                    <h2  data-title="Full Coverage States">Full Coverage States</h2>
                     <p className="byline">We assist with research and filing from coast-to-coast, with a focus on the States shown below where we cover every County</p>
                   </div>
                   <div className="addresses">

@@ -645,6 +645,12 @@ div#three-column,
   margin: 0 10px;
 }
 
+.footer-logos img.b-corp {
+  top: -4px;
+  position: relative;
+  max-height: 100px;
+}
+
 /*********************************************************************************/
 /* Featured                                                                      */
 /*********************************************************************************/
@@ -1142,7 +1148,7 @@ width: 100%;
 .map-overlay {
   position: absolute;
   width: 100%;
-  top: 50%;
+  top: 65%;
   transform: translate(0, -50%);
 }
 

@@ -62,11 +62,21 @@ const Footer = () => {
       <div className="footer">
         <div className="container">
           <div className="footer-logos">
-            {logos.map((logo, idx) => (
-              <img key={idx} src={logo.logoImage.sourceUrl} alt={logo.logoImage.altText} />
-            ))}
+            {logos.map((logo, idx) => {
+              
+              if (logo.logoImage.altText === 'Certified B Corp') {
+                return (
+                  <a href="https://bcorporation.net/" target="_blank" noreferrer nofollow>
+                    <img className="b-corp" key={idx} src={logo.logoImage.sourceUrl} alt={logo.logoImage.altText} />
+                  </a>
+                )
+              }
+              return (
+                <img key={idx} src={logo.logoImage.sourceUrl} alt={logo.logoImage.altText} />
+              )
+            })}
           </div>
-          <p>{footerCopyrightText.copyrightInformation && parse(footerCopyrightText.copyrightInformation)} | <Link to="/privacy-policy/">Privacy Policy</Link> | All rights reserved.</p>
+          <p>{footerCopyrightText.copyrightInformation && parse(footerCopyrightText.copyrightInformation)} | <Link to="/privacy-policy/">Privacy Policy</Link> | All rights reserved</p>
         </div>
       </div>
     </>
