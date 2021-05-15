@@ -45,9 +45,11 @@ const PageTemplate = ({ data: { page } }) => {
           </div>
         </div>
         {page.title === 'Services_not_used' && (
-          <div id="extra" className="container">
-            <div className="title">
-              <h2>Boomerang Information Services provides 3 services</h2>
+          <div id="extra">
+            <div className="container">
+              <div className="title">
+                <h2>Boomerang Information Services provides 3 services</h2>
+              </div>
             </div>
             <div id="three-column">
               <div className="boxA">
