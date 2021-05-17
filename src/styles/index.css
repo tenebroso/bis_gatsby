@@ -178,6 +178,11 @@ div#three-column,
   display: flex;
 }
 
+#three-column > a {
+  display: block;
+  text-decoration: none;
+}
+
 .gallery .boxA,
 .gallery .boxB,
 .gallery .boxC {
@@ -848,6 +853,9 @@ width: 100%;
   font-size: 18px;
 }
 
+.page-content.add-space {
+  padding-top: 90px;
+}
 
 .page-content .container ul {
   list-style-type: square;

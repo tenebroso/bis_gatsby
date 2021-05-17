@@ -119,27 +119,27 @@ const PageTemplate = ({ data: { page } }) => {
             {/* <span className="byline">Most requests are completed within 24-hours and we keep you informed every step of the way.</span> */}
           </div>
           <div id="three-column">
-            <div className="boxA">
+            <Link className="boxA" to={'/services#county'}>
               <div className="box no-outline">
                 <img src={Binoculars} alt="Binoculars" />
                 <h2>County Search</h2>
                 <p>UCC | Liens | Litigation</p>
               </div>
-            </div>
-            <div className="boxB">
+            </Link>
+            <Link className="boxB" to={'/services#title'}>
               <div className="box no-outline">
                  <img src={Document} alt="Document" />
                 <h2>Title Search</h2>
                 <p>Commercial | Residential</p>
               </div>
-            </div>
-            <div className="boxC">
+            </Link>
+            <Link className="boxC" to={'/services#ucc'}>
               <div className="box no-outline">
                 <img src={Magnifier} alt="Magnifiying Icon" />
                 <h2>State Level</h2>
                 <p>Corporate | UCC</p>
               </div>
-            </div>
+            </Link>
           </div>
           <ul className="actions">
             <li><Link to="/contact" className="button">Contact Us</Link></li>
