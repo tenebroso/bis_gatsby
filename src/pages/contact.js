@@ -4,6 +4,7 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 import ContactHeader from '../images/contact.jpg';
 import SEO from '../components/seo';
+import { config } from '../constants';
 
 // markup
 const ContactPage = () => {
@@ -19,27 +20,25 @@ const ContactPage = () => {
     });
     if (ok) {
       form.reset();
+      console.log(ok, msg);
     }
   };
   const handleOnSubmit = e => {
-    console.log('submit');
     e.preventDefault();
     const form = e.target;
-    // setServerState({ submitting: true });
-    // axios({
-    //   method: "post",
-    //   url: config.FORM_POST,
-    //   data: new FormData(form)
-    // })
-    //   .then(r => {
-    //     handleServerResponse(true, "Thanks!", form);
-    //   })
-    //   .catch(r => {
-    //     handleServerResponse(false, r.response.data.error, form);
-    //   });
+    setServerState({ submitting: true });
+    axios({
+      method: "post",
+      url: config.FORM_POST,
+      data: new FormData(form)
+    })
+      .then(r => {
+        handleServerResponse(true, "Thanks!", form);
+      })
+      .catch(r => {
+        handleServerResponse(false, r.response.data.error, form);
+      });
   };
-
-  console.log(serverState);
   
   return (
     <>
@@ -65,12 +64,17 @@ const ContactPage = () => {
           <div className="container">
             <div className="bis-form-container">
               <h3 className="title">Contact Us</h3>
-              <form onSubmit={handleOnSubmit} className="bis-form">
-                <input type="email" name="email" placeholder="Your Email" />
-                <input type="text" name="name" placeholder="Your Name" />
-                <textarea type="text" name="message" placeholder="Your Message" />
-                <button type="submit" className="button">Send</button>
-              </form>
+              {(!serverState.submitting && serverState.status) ? (
+                <p>Thank you! Your form submission has been received.</p>
+              ) : (
+                <form onSubmit={handleOnSubmit} className="bis-form">
+                  <input type="email" name="email" placeholder="Your Email" />
+                  <input type="text" name="name" placeholder="Your Name" />
+                  <textarea type="text" name="message" placeholder="Your Message" />
+                  <button type="submit" className="button">Send</button>
+                </form>
+              )}
+              
             </div>
           </div>
         </div>
