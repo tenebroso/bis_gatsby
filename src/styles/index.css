@@ -298,14 +298,13 @@ div#three-column,
   transition: ease-in all .3s;
   position: relative;
   transform-origin: 0, 0;
-  width: 55px;
-  height: 56px;
+  width: 50px;
+  height: 51px;
   border: 1px solid transparent;
   border-radius: 50%;
 }
 
 #logo img.alt-logo.yo {
-  width: 55px;
   /* transform: translate(0, -105px) rotate(720deg); */
   transition: ease-out all .5s;
   transform: translate(0, -105px);
