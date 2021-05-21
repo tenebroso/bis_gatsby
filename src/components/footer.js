@@ -66,7 +66,7 @@ const Footer = () => {
               
               if (logo.logoImage.altText === 'Certified B Corp') {
                 return (
-                  <a href="https://bcorporation.net/" target="_blank" noreferrer="true" nofollow="true" key={idx}>
+                  <a href="https://bcorporation.net/" target="_blank" rel="noopener" rel="noreferrer" key={idx}>
                     <img className="b-corp" key={idx} src={logo.logoImage.sourceUrl} alt={logo.logoImage.altText} />
                   </a>
                 )
