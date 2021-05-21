@@ -8,9 +8,9 @@ import Footer from '../components/footer';
 import { COLORS } from '../constants/colors';
 
 
-// import CutCosts from '../images/cut-costs.png';
-// import ResponsiveTeam from '../images/responsive-team.png';
-// import ClearReporting from '../images/clear-reporting.png';
+import Blog1 from '../images/nick-bolton-_fMPg0ehPhg-unsplash-scaled-1.jpg';
+import Blog2 from '../images/covid-19.jpg';
+import Blog3 from '../images/Blog500x300_UCCGlossary_BoomerangIS2.png';
 
 import Binoculars from '../images/iconmonstr-binoculars-8-240.png';
 import Magnifier from '../images/iconmonstr-magnifier-10-240.png';
@@ -212,7 +212,7 @@ const PageTemplate = ({ data: { page } }) => {
                 <div className="blog-post-content">
                   <h2>An SOS for the Arts</h2>
                   <p>At Boomerang, we love the arts.  Many of our staff are actively involved in making art and we, as an organization, support the work of a variety of arts organizations...</p>
-                  <img src="https://www.boomerangis.com/wp-content/uploads/2020/05/nick-bolton-_fMPg0ehPhg-unsplash-320x202.jpg" alt="An SOS for the Arts" />
+                  <img src={Blog1} alt="An SOS for the Arts" />
                 </div>
               </Link>
 
@@ -220,7 +220,7 @@ const PageTemplate = ({ data: { page } }) => {
                 <div className="blog-post-content">
                   <h2>Additional Role of COVID-19 – The Nonprofit Sector</h2>
                   <p>Of the many traditions, institutions and social structures adversely affected by COVID-19, the nonprofit sector is perhaps among the most vulnerable...</p>
-                  <img src="https://www.boomerangis.com/wp-content/uploads/2020/04/unnamed-320x202.png" alt="Additional role of COVID-19" />
+                  <img src={Blog2} alt="Additional role of COVID-19" />
                 </div>
               </Link>
 
@@ -228,7 +228,7 @@ const PageTemplate = ({ data: { page } }) => {
                 <div className="blog-post-content">
                   <h2>A U.C.C. Glossary: Confusing Terms and Their Definitions</h2>
                   <p>At our house we have an ongoing game of coming up with names for a hypothetical band, despite the fact that none of us are currently in one...</p>
-                  <img src="https://www.boomerangis.com/wp-content/uploads/2019/06/Blog500x300_UCCGlossary_BoomerangIS2-320x202.png" alt="Boomerang UCC Glossary" />
+                  <img src={Blog3} alt="Boomerang UCC Glossary" />
                 </div>
               </Link>
 
