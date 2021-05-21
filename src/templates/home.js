@@ -45,7 +45,7 @@ const PageTemplate = ({ data: { page } }) => {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <meta name="description">Our mission at Boomerang is to give corporate information services a human touch, making due diligence a conversation instead of a headache.</meta>
+        <meta name="description" content="Our mission at Boomerang is to give corporate information services a human touch, making due diligence a conversation instead of a headache." />
         <title>Boomerang Information Systems</title>
         <link rel="canonical" href="https://boomerangis.com" />
       </Helmet>
