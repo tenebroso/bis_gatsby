@@ -1,4 +1,4 @@
-import React, { useState }  from "react"
+import React, { useState }  from 'react'
 import axios from "axios";
 import Header from '../components/header';
 import Footer from '../components/footer';
@@ -6,7 +6,6 @@ import ContactHeader from '../images/contact.jpg';
 import SEO from '../components/seo';
 import { config } from '../constants';
 
-// markup
 const ContactPage = () => {
   
   const [serverState, setServerState] = useState({
@@ -20,7 +19,6 @@ const ContactPage = () => {
     });
     if (ok) {
       form.reset();
-      console.log(ok, msg);
     }
   };
   const handleOnSubmit = e => {
@@ -28,12 +26,12 @@ const ContactPage = () => {
     const form = e.target;
     setServerState({ submitting: true });
     axios({
-      method: "post",
+      method: 'post',
       url: config.FORM_POST,
       data: new FormData(form)
     })
       .then(r => {
-        handleServerResponse(true, "Thanks!", form);
+        handleServerResponse(true, 'Thanks!', form);
       })
       .catch(r => {
         handleServerResponse(false, r.response.data.error, form);
@@ -53,7 +51,7 @@ const ContactPage = () => {
           <div className="container">
             <div className="page-header-text">
               <h1 className="page-header-title">Contact Us</h1>
-              <h2 className="page-header-sub-title">Learn about our office locations and ways to reach out.</h2>
+              <h2 className="page-header-sub-title">Learn about our office locations and ways to reach out</h2>
             </div>
             <div className="page-header-photos banner-photos">
               <img src={ContactHeader} alt="Contact Phone, Social and Email" />
@@ -90,20 +88,6 @@ const ContactPage = () => {
               888.866.4495<br />
               <a href="mailto:orders@boomerangis.com">orders@boomerangis.com</a>
             </div>
-            {/* <div className="address-block">
-              <h3>Seattle</h3>
-              100 S King St. Suite 100, Seattle, WA 98104<br />
-              312.662.1206<br />
-              888.866.4495<br />
-              <a href="mailto:orders@boomerangis.com">orders@boomerangis.com</a>
-            </div>
-            <div className="address-block">
-              <h3>Boston</h3>
-              660 Main Street, Woburn, MA 01801<br />
-              312.662.1206<br />
-              888.866.4495<br />
-              <a href="mailto:orders@boomerangis.com">orders@boomerangis.com</a>
-            </div> */}
           </div>
         </div>
       </div>

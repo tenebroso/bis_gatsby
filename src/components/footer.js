@@ -1,8 +1,7 @@
-import * as React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import * as React from 'react'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 import parse from "html-react-parser"
 
-// markup
 const Footer = () => {
   const {
     wp: {
@@ -67,7 +66,7 @@ const Footer = () => {
               if (logo.logoImage.altText === 'Certified B Corp') {
                 return (
                   <a href="https://bcorporation.net/" target="_blank" rel="noopener" rel="noreferrer" key={idx}>
-                    <img className="b-corp" key={idx} src={logo.logoImage.sourceUrl} alt={logo.logoImage.altText} />
+                    <img className="b-corp" src={logo.logoImage.sourceUrl} alt={logo.logoImage.altText} />
                   </a>
                 )
               }

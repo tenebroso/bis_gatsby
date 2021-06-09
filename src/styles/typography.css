@@ -1,0 +1,50 @@
+body {
+  font-family: 'Jost', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #656565;
+}
+
+h1, h2, h3
+{
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  color: #343e48;
+}
+
+p, ol, ul
+{
+  margin-top: 0;
+}
+
+ol, ul
+{
+  padding: 0;
+  list-style: none;
+}
+
+ul.actions
+{
+  text-align: center;
+}
+
+p
+{
+  line-height: 180%;
+}
+
+strong
+{
+}
+
+a
+{
+  color: #39b4ed;
+}
+
+a:hover
+{
+  text-decoration: none;
+}

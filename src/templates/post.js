@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react'
 import parse from "html-react-parser"
-import { graphql } from "gatsby"
+import { graphql } from 'gatsby'
 import Image from "gatsby-image"
 
 import Header from '../components/header';
@@ -29,12 +29,6 @@ const PostTemplate = ({ data: { page } }) => {
               <h1 className="post-header-title">{page.title}</h1>
               <p className="post-header-sub-title">{page.date}</p>
             </div>
-            {/* <div className="page-header-photos banner-photos">
-              <Image
-                fluid={featuredImage.fluid}
-                alt={featuredImage.alt}
-              />
-            </div> */}
           </div>
         </div>
         <div className="page-content dark-bg">

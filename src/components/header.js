@@ -1,12 +1,11 @@
-import * as React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
-import { useRef, useEffect } from "react";
+import * as React from 'react'
+import { Link, useStaticQuery, graphql } from 'gatsby'
+import { useRef, useEffect } from 'react';
 
 import SocialIcons from './social-icons';
 import LogoImg from "../images/logo-2.png";
 import LogoCircle from "../images/logo-circle.png";
 
-// markup
 const Header = () => {
   const logoRoller = useRef(null);
 

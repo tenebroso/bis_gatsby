@@ -1,4 +1,5 @@
-import "./src/styles/index.css";
+import './src/styles/typography.css';
+import './src/styles/index.css';
 
 export const onRouteUpdate = ({ location, prevLocation }) => {
   const el = document.querySelector('.page-content.dark-bg');
