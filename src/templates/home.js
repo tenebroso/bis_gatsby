@@ -1,16 +1,13 @@
-import React from "react"
-import { Helmet } from "react-helmet"
-import { graphql, Link } from "gatsby"
-import USAMap from "react-usa-map"
+import React from 'react'
+import { Helmet } from 'react-helmet'
+import parse from "html-react-parser"
+import { graphql, Link } from 'gatsby'
+import Image from "gatsby-image"
+import USAMap from 'react-usa-map'
 
 import Header from '../components/header';
 import Footer from '../components/footer';
 import { COLORS } from '../constants/colors';
-
-
-import Blog1 from '../images/nick-bolton-_fMPg0ehPhg-unsplash-scaled-1.jpg';
-import Blog2 from '../images/covid-19.jpg';
-import Blog3 from '../images/Blog500x300_UCCGlossary_BoomerangIS2.png';
 
 import Binoculars from '../images/iconmonstr-binoculars-8-240.png';
 import Magnifier from '../images/iconmonstr-magnifier-10-240.png';
@@ -19,10 +16,6 @@ import Document from '../images/iconmonstr-note-31-240.png';
 import JurisdictionsPhoto from '../images/jurisdictions.jpg';
 import SampleImg from '../images/mikita-yo-A1O9SszBHqE-unsplash.jpg';
 import GroupPhoto from '../images/IMG_9201-1200x800.jpg';
-
-import EastCoast from '../images/eastcoast.png';
-import WestCoast from '../images/pacific.png';
-import Midwest from '../images/midwest.png';
 
 const STATES = [
   'CA', 'WA', 'OR', 'IL', 'IN', 'OH', 'MI', 'WI', 'CT', 'DC', 'DE', 'MA', 'MD', 'NJ', 'NY', 'PA'
@@ -40,7 +33,14 @@ const statesCustomConfig = () => {
   return STATES_CONFIG;
 };
 
-const PageTemplate = ({ data: { page } }) => {
+const PageTemplate = ({
+  data: {
+    page,
+    allWpPost: {
+      nodes: posts
+    },
+  }
+}) => {
   return (
     <>
       <Helmet>
@@ -49,8 +49,6 @@ const PageTemplate = ({ data: { page } }) => {
         <title>Boomerang Information Systems</title>
         <link rel="canonical" href="https://boomerangis.com" />
       </Helmet>
-      <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" /> 
       <div id="wrapper">
         <Header />
         <div id="banner">
@@ -86,38 +84,9 @@ const PageTemplate = ({ data: { page } }) => {
             <li><Link to="/contact" className="button">Let's Get Started</Link></li>
           </ul>
         </div>
-        {/* <div id="extra" className="container">
-          <div className="title">
-            <h2>We’re here for you.</h2>
-            <span className="byline">Most requests are completed within 24-hours and we keep you informed every step of the way.</span> </div>
-          <div id="three-column">
-            <div className="boxA">
-              <div className="box">
-                <img src={CutCosts} alt="Cut Costs" />
-                <p>Other service providers charge up to 50% more than Boomerang. We make it clear exactly what you are paying for, with no hidden fees. Ever.</p>
-              </div>
-            </div>
-            <div className="boxB">
-              <div className="box">
-                <img src={ClearReporting} alt="Clear Reporting" />
-                <p>Deliverables come in clearly labeled PDFs with outlines and summaries you can understand at a glance. Plus your researcher is  always available for questions.</p>
-              </div>
-            </div>
-            <div className="boxC">
-              <div className="box">
-                <img src={ResponsiveTeam} alt="Responsive Team" />
-                <p>Boomerang’s research team is with you every step of the way. Know exactly what the status of request is and get updated at every stage. If you have questions, our research specialists have answers.</p>
-              </div>
-            </div>
-          </div>
-          <ul className="actions">
-            <li><Link to="/contact" className="button">Contact Us</Link></li>
-          </ul>
-        </div> */}
         <div id="extra" className="container">
           <div className="title">
             <h2>Our Services</h2>
-            {/* <span className="byline">Most requests are completed within 24-hours and we keep you informed every step of the way.</span> */}
           </div>
           <div id="three-column">
             <Link className="boxA" to={'/services#county'}>
@@ -150,12 +119,10 @@ const PageTemplate = ({ data: { page } }) => {
           <div className="container">
             <div className="title">
               <h2>Full Coverage States</h2>
-              {/* <span className="byline">Most requests are completed within 24-hours and we keep you informed every step of the way.</span> */}
             </div>
             <div className="map-wrapper">
               <USAMap customize={statesCustomConfig()} />
               <div className="map-overlay">
-                
                   <div className="title">
                     <p className="byline">We assist with research and filing from coast-to-coast, with a focus on the States shown below where we cover every County</p>
                   </div>
@@ -173,32 +140,9 @@ const PageTemplate = ({ data: { page } }) => {
                       CT, DC, DE, MA, MD, NJ, NY, PA
                     </div>
                   </div>
-
               </div>
             </div>
-{/*             
-            <div className="title">
-              <h2>Regional Areas</h2>
-              <span className="byline">Our offices provide complete county coverage in Illinois, Indiana, Michigan, Ohio, <br />Wisconsin, Connecticut, Massachusetts, New York, Pennsylvania, California, Oregon, and Washington. <br />Our offices in Chicago and Seattle also provide a suite of DMV, consulate, and Secretary of State services.</span> </div>
-            <div className="gallery">
-              <div className="boxA">
-                <h3>Pacific Coast</h3>
-                <img src={WestCoast} alt="" />
-              </div>
-              <div className="boxB">
-                <h3>Great Lakes/Midwest</h3>
-                <img src={Midwest} alt="" />
-              </div>
-              <div className="boxC">
-                <h3>Mid-Atlantic/East Coast</h3>
-                <img src={EastCoast} alt="" />
-              </div>
-            </div> */}
-          </div>	
-          {/* <p>Since 2002, our clients have trusted us with their most complex research projects, freeing them up to focus on bigger priorities.<br />Our exceptional customer service, attention to detail and fast turnaround times have helped us <br />build our reputation as a reliable partner for all your research needs.</p> */}
-          {/* <ul className="actions">
-            <li><Link to="/contact" className="button">Contact Us</Link></li>
-          </ul> */}
+          </div>
         </div>
 
         <div id="blog">
@@ -208,29 +152,26 @@ const PageTemplate = ({ data: { page } }) => {
               <h2>Latest from the Blog</h2>
               <span className="byline"></span>
             </div>
-              <Link className="blog-post" to="/blog">
-                <div className="blog-post-content">
-                  <h2>An SOS for the Arts</h2>
-                  <p>At Boomerang, we love the arts.  Many of our staff are actively involved in making art and we, as an organization, support the work of a variety of arts organizations...</p>
-                  <img src={Blog1} alt="An SOS for the Arts" />
-                </div>
-              </Link>
+              {posts.map((post, i) => {
+                const featuredImage = {
+                  fluid: post.featuredImage?.node?.localFile?.childImageSharp?.fluid,
+                  alt: post.featuredImage?.node?.alt || ``,
+                }
 
-              <Link className="blog-post" to="/blog">
-                <div className="blog-post-content">
-                  <h2>Additional Role of COVID-19 – The Nonprofit Sector</h2>
-                  <p>Of the many traditions, institutions and social structures adversely affected by COVID-19, the nonprofit sector is perhaps among the most vulnerable...</p>
-                  <img src={Blog2} alt="Additional role of COVID-19" />
-                </div>
-              </Link>
-
-              <Link className="blog-post" to="/blog">
-                <div className="blog-post-content">
-                  <h2>A U.C.C. Glossary: Confusing Terms and Their Definitions</h2>
-                  <p>At our house we have an ongoing game of coming up with names for a hypothetical band, despite the fact that none of us are currently in one...</p>
-                  <img src={Blog3} alt="Boomerang UCC Glossary" />
-                </div>
-              </Link>
+                return (
+                  <Link to={post.uri} className="blog-post" key={i}>
+                    <div className="blog-post-content">
+                      <h2>{post.title}</h2>
+                      <p>{parse(post.excerpt)}</p>
+                      <Image
+                        fluid={featuredImage.fluid}
+                        alt={featuredImage.alt}
+                      />
+                      <p className="blog-post-date">{post.date}</p>
+                    </div>
+                  </Link>
+                )
+              })}
 
               <ul className="actions">
                 <li><Link className="button" to="/blog">Read More</Link></li>
@@ -272,6 +213,31 @@ export const homeQuery = graphql`
           altText
           mediaItemUrl
           srcSet
+        }
+      }
+    }
+
+    allWpPost(
+      sort: { fields: [date], order: DESC }
+      limit: 3
+    ) {
+      nodes {
+        excerpt
+        uri
+        date(formatString: "MMMM DD, YYYY")
+        title
+
+        featuredImage {
+          node {
+            altText
+            localFile {
+              childImageSharp {
+                fluid(maxWidth: 600, quality: 100) {
+                  ...GatsbyImageSharpFluid_tracedSVG
+                }
+              }
+            }
+          }
         }
       }
     }

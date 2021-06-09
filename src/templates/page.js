@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react'
 import parse from "html-react-parser"
-import { graphql, Link } from "gatsby"
+import { graphql, Link } from 'gatsby'
 import Image from "gatsby-image"
 
 import SEO from '../components/seo';
@@ -32,9 +32,6 @@ const PageTemplate = ({ data: { page } }) => {
             <div className="page-header-text">
               <h1 className="page-header-title">{page.title}</h1>
               <h2 className="page-header-sub-title">{!!page.page_header && !!page.page_header.subtitle && page.page_header.subtitle}</h2>
-              {/* <img src={MagnifyingIcon} />
-              <img src={HandIcon} />
-              <img src={FileIcon} /> */}
             </div>
             <div className="page-header-photos banner-photos">
               <Image

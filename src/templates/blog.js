@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react'
 import parse from "html-react-parser"
-import { graphql, Link } from "gatsby"
+import { graphql, Link } from 'gatsby'
 import Image from "gatsby-image"
 
 import Header from '../components/header';
