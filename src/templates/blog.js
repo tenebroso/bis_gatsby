@@ -59,7 +59,7 @@ const BlogTemplate = ({
                 <Link to={post.uri} className="blog-post" key={i}>
                   <div className="blog-post-content">
                     <h2>{post.title}</h2>
-                    <p>{parse(post.excerpt)}</p>
+                    {/* <p>{parse(post.excerpt)}</p> */}
                     <Image
                       fluid={featuredImage.fluid}
                       alt={featuredImage.alt}
