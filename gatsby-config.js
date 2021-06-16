@@ -25,9 +25,18 @@ module.exports = {
       options: {
         useACF: true,
         verboseOutput: true,
-        url: process.env.WPGRAPHQL_URL || `http://boomerangstgng.wpengine.com/graphql`,
+        url: process.env.WPGRAPHQL_URL || `https://data.boomerangis.com/graphql`,
+        production: {
+          hardCacheMediaFiles: true,
+        },
         develop: {
           hardCacheMediaFiles: true,
+        },
+        auth: {
+          htaccess: {
+            username: `boomerangis`,
+            password: 'abcdc13a',
+          },
         },
         type: {
           Post: {

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import parse from "html-react-parser"
+// import parse from "html-react-parser"
 import { graphql, Link } from 'gatsby'
 import Image from "gatsby-image"
 import USAMap from 'react-usa-map'
