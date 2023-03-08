@@ -87,7 +87,7 @@ const BlogPage = () => (
   <>
     <Helmet>
       <meta charSet="utf-8" />
-      <title>Boomerang Information Systems</title>
+      <title>Boomerang Information Services</title>
       <link rel="canonical" href="https://boomerangis.com" />
     </Helmet>
     <Header />

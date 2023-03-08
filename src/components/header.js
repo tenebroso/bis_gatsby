@@ -59,7 +59,7 @@ const Header = () => {
       <div id="header">
         <div className="container">
           <Link to="/" id="logo">
-            <img src={LogoImg} className="logo" alt="Boomerang Information Systems" />
+            <img src={LogoImg} className="logo" alt="Boomerang Information Services" />
             <img src={LogoCircle} ref={logoRoller} className="alt-logo" alt="Boomerang Circle Icon" />
           </Link>
           <SocialIcons />
