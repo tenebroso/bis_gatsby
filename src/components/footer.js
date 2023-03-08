@@ -75,7 +75,7 @@ const Footer = () => {
               )
             })}
           </div>
-          <p>{footerCopyrightText.copyrightInformation && parse(footerCopyrightText.copyrightInformation)} | <Link to="/privacy-policy/">Privacy Policy</Link> | All rights reserved</p>
+          <p>{footerCopyrightText.copyrightInformation && parse(footerCopyrightText.copyrightInformation)} | All rights reserved</p>
         </div>
       </div>
     </>

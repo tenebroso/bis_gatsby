@@ -136,7 +136,7 @@ exports.createPages = async gatsbyUtilities  => {
  async function getNodes(graphql, reporter) {
   const graphqlResult = await graphql(/* GraphQL */ `
   query WpPosts {
-    allWpPost(sort: {fields: [date], order: DESC}) {
+    allWpPost(sort: {date: DESC}) {
       edges {
         post: node {
           __typename
@@ -170,7 +170,7 @@ exports.createPages = async gatsbyUtilities  => {
         }
       }
     }
-  }  
+  }
 `)
 
   if (graphqlResult.errors) {

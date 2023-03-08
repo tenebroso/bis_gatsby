@@ -114,7 +114,7 @@ const BlogPage = () => (
                   <div className="blog-post-content">
                     <h2>{post.title}</h2>
                     <p>{post.description}</p>
-                    <p className="blog-post-date">{post.date}</p>
+                    {/* <p className="blog-post-date">{post.date}</p> */}
                   </div>
                 </Link>
               )

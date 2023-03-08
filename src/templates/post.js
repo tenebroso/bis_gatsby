@@ -27,7 +27,7 @@ const PostTemplate = ({ data: { page } }) => {
           <div className="container">
             <div className="post-header-text">
               <h1 className="post-header-title">{page.title}</h1>
-              <p className="post-header-sub-title">{page.date}</p>
+              {/* <p className="post-header-sub-title">{page.date}</p> */}
             </div>
           </div>
         </div>

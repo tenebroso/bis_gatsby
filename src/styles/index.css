@@ -842,8 +842,9 @@ width: 100%;
 }
 
 .bis-form-container .title {
-  font-size: 24px;
+  font-size: 52px;
   margin: 0 0 20px 0;
+  line-height: 1;
   color: white;
   width: 100%;
 }
@@ -851,6 +852,19 @@ width: 100%;
 .bis-form {
   width: 50%;
   display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .bis-form {
+    width: 100%;
+  }
+  .footer-logos {
+    flex-wrap: wrap;
+  }
+
+  .footer-logos img {
+    margin-bottom: 20px;
+  }
 }
 
 .bis-form input[type="text"],

@@ -3,7 +3,6 @@ import parse from 'html-react-parser';
 import axios from 'axios';
 import Header from './header';
 import Footer from './footer';
-import ContactHeader from '../images/contact.jpg';
 import SEO from './seo';
 import { config } from '../constants';
 
@@ -50,21 +49,10 @@ const ContactPage = ({
       <Header />
 
       <div id="wrapper">
-        <div className="page-header">
-          <div className="container">
-            <div className="page-header-text">
-              <h1 className="page-header-title">{page.title}</h1>
-              <h2 className="page-header-sub-title">{!!page.page_header && !!page.page_header.subtitle && page.page_header.subtitle}</h2>
-            </div>
-            <div className="page-header-photos banner-photos">
-              <img src={ContactHeader} alt="Contact Phone, Social and Email" />
-            </div>
-          </div>
-        </div>
         <div className="page-content dark-bg">
           <div className="container">
             <div className="bis-form-container">
-              <h3 className="title">Contact Us</h3>
+            <h1 className='title'>Contact Us</h1>
               {(!serverState.submitting && serverState.status) ? (
                 <p>Thank you! Your form submission has been received.</p>
               ) : (

@@ -167,7 +167,7 @@ const PageTemplate = ({
                         fluid={featuredImage.fluid}
                         alt={featuredImage.alt}
                       />
-                      <p className="blog-post-date">{post.date}</p>
+                      {/* <p className="blog-post-date">{post.date}</p> */}
                     </div>
                   </Link>
                 )
