@@ -18,7 +18,7 @@ import SampleImg from '../images/mikita-yo-A1O9SszBHqE-unsplash.jpg';
 import GroupPhoto from '../images/IMG_9201-1200x800.jpg';
 
 const STATES = [
-  'CA', 'WA', 'OR', 'IL', 'IN', 'OH', 'MI', 'WI', 'CT', 'DC', 'DE', 'MA', 'MD', 'NJ', 'NY', 'PA'
+  'CA', 'WA', 'OR', 'IL', 'IN', 'OH', 'MI', 'WI', 'CT', 'DC', 'DE', 'MA', 'MD', 'NJ', 'NY', 'PA', 'FL'
 ];
 
 const STATES_CONFIG = {};
@@ -121,7 +121,7 @@ const PageTemplate = ({
               <h2>Full Coverage States</h2>
             </div>
             <div className="map-wrapper">
-              <USAMap customize={statesCustomConfig()} />
+              <USAMap customize={statesCustomConfig()} title="Boomerang Information Services Areas of Coverage" />
               <div className="map-overlay">
                   <div className="title">
                     <p className="byline">We assist with research and filing from coast-to-coast, with a focus on the States shown below where we cover every County</p>
@@ -137,7 +137,7 @@ const PageTemplate = ({
                     </div>
                     <div className="address-block">
                       <h3>Mid-Atlantic/East Coast</h3>
-                      CT, DC, DE, MA, MD, NJ, NY, PA
+                      CT, DC, DE, FL, MA, MD, NJ, NY, PA
                     </div>
                   </div>
               </div>
