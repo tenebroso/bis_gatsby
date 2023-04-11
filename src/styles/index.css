@@ -485,6 +485,10 @@ div#three-column,
 
 .banner-photos img {
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  object-fit: cover;
+  width: auto;
+  min-height: 100%;
+
 }
 
 .banner-photos > div {
@@ -494,6 +498,7 @@ div#three-column,
 
 .banner-photo-right img {
   margin-bottom: 10px;
+  
 }
 
 #banner .title
@@ -864,6 +869,15 @@ width: 100%;
 
   .footer-logos img {
     margin-bottom: 20px;
+    object-fit: contain;
+    height: auto;
+    max-width: 100px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  #logo img.alt-logo {
+    display: none;
   }
 }
 
@@ -1002,9 +1016,9 @@ width: 100%;
 }
 
 @media screen and (max-width: 380px) {
-  #logo img.logo {
+  /* #logo img.logo {
     display: none;
-  }
+  } */
 
   #logo img.alt-logo,
   #logo img.alt-logo.yo {
@@ -1066,6 +1080,14 @@ width: 100%;
     padding-bottom: 1.75em;
   }
 
+  .blog-container {
+    flex-wrap: wrap;
+  }
+
+  .blog-container > .blog-post {
+    flex: 1 1 100%;
+  }
+
   #menu,
   .blog-post:before,
   .title .byline br {
@@ -1097,6 +1119,10 @@ width: 100%;
 
   .title {
     margin-bottom: 1em;
+  }
+
+  .banner-photos {
+    flex-wrap: wrap;
   }
 
   .banner-photos > div {
@@ -1156,6 +1182,7 @@ width: 100%;
   .map-overlay .address-block {
     width: 100%;
     margin-bottom: 20px;
+    margin-left: 0;
   }
 
   .map-overlay {

@@ -13,9 +13,9 @@ import Binoculars from '../images/iconmonstr-binoculars-8-240.png';
 import Magnifier from '../images/iconmonstr-magnifier-10-240.png';
 import Document from '../images/iconmonstr-note-31-240.png';
 
-import JurisdictionsPhoto from '../images/jurisdictions.jpg';
+
 import SampleImg from '../images/mikita-yo-A1O9SszBHqE-unsplash.jpg';
-import GroupPhoto from '../images/IMG_9201-1200x800.jpg';
+import GroupPhotoUpdated from '../images/group-of-people.jpg';
 
 const STATES = [
   'CA', 'WA', 'OR', 'IL', 'IN', 'OH', 'MI', 'WI', 'CT', 'DC', 'DE', 'MA', 'MD', 'NJ', 'NY', 'PA', 'FL'
@@ -68,8 +68,8 @@ const PageTemplate = ({
                 <img src={SampleImg} alt="City Skyline" />
               </div>
               <div className="banner-photo-right">
-                <img src={GroupPhoto} alt="Group Gathered around a table" />
-                <img src={JurisdictionsPhoto} alt="Map" />
+                <img src={GroupPhotoUpdated} alt="Group Gathered around a table" />
+                {/* <img src={JurisdictionsPhoto} alt="Map" /> */}
               </div>
             </div>
           </div>
