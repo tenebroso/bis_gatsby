@@ -18,7 +18,7 @@ import SampleImg from '../images/mikita-yo-A1O9SszBHqE-unsplash.jpg';
 import GroupPhotoUpdated from '../images/group-of-people.jpg';
 
 const STATES = [
-  'CA', 'WA', 'OR', 'IL', 'IN', 'OH', 'MI', 'WI', 'CT', 'DC', 'DE', 'MA', 'MD', 'NJ', 'NY', 'PA', 'FL'
+  'CA', 'WA', 'OR', 'IL', 'IN', 'OH', 'MI', 'WI', 'CT', 'DC', 'DE', 'MA', 'MD', 'NJ', 'NY', 'PA', 'FL','MN'
 ];
 
 const STATES_CONFIG = {};
@@ -133,7 +133,7 @@ const PageTemplate = ({
                     </div>
                     <div className="address-block">
                       <h3>Great Lakes/Midwest</h3>
-                      IL, IN, OH, MI, WI
+                      IL, IN, OH, MI, MN, WI
                     </div>
                     <div className="address-block">
                       <h3>Mid-Atlantic/East Coast</h3>
