@@ -18,7 +18,7 @@ import SampleImg from '../images/mikita-yo-A1O9SszBHqE-unsplash.jpg';
 import GroupPhotoUpdated from '../images/group-of-people.jpg';
 
 const STATES = [
-  'CA', 'WA', 'OR', 'IL', 'IN', 'OH', 'MI', 'WI', 'CT', 'DC', 'DE', 'MA', 'MD', 'NJ', 'NY', 'PA', 'FL','MN'
+  'CA', 'WA', 'OR', 'IL', 'IN', 'OH', 'MI', 'WI', 'CT', 'DC', 'DE', 'MA', 'MD', 'NJ', 'NY', 'PA', 'FL','MN', 'DC1', 'DC2'
 ];
 
 const STATES_CONFIG = {};
