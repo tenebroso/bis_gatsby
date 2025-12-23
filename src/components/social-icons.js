@@ -18,23 +18,6 @@ const SocialIcons = () => {
       >
         <FaLinkedinIn />
       </a>
-      <a
-        href={config.TWITTER_URL}
-        target="_blank"
-        title="Contact Boomerang Information Services at Twitter"
-        rel="noopener noreferrer"
-      >
-        <FaTwitter />
-      </a>
-      <a
-        href={config.FACEBOOK_URL}
-        target="_blank"
-        title="Contact Boomerang Information Services at Facebook"
-        rel="noopener noreferrer"
-        className="fb"
-      >
-        <FaFacebookF />
-      </a>
     </div>
   )
 }
