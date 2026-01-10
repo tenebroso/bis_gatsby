@@ -45,7 +45,7 @@ const PageTemplate = ({
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <meta name="description" content="Our mission <!-- at Boomerang -->is to give corporate information services a human touch, making due diligence a conversation instead of a headache." />
+        <meta name="description" content="Our mission at Boomerang is to give corporate information services a human touch, making due diligence a conversation instead of a headache." />
         <title>Boomerang Information Services</title>
         <link rel="canonical" href="https://boomerangis.com" />
       </Helmet>
@@ -78,7 +78,7 @@ const PageTemplate = ({
           <div className="container">
             <div className="title">
               <h2>Accurate Information, Excellent Service</h2>
-              <span className="byline">Our mission at Boomerang is to give corporate information services a human touch, making due diligence a conversation instead of a headache.</span> </div>
+              <span className="byline">Our mission <!--at Boomerang-->is to give corporate information services a human touch, making due diligence a conversation instead of a headache.</span> </div>
           </div>
           <ul className="actions">
             <li><Link to="/contact" className="button">Let's Get Started</Link></li>
